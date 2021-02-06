@@ -15,5 +15,8 @@ do
     then
         echo "FizzBuzz"
     fi
-    echo "$i"
+    if [ ! $((i % 5)) -eq 0 ] && [ ! $((i % 3)) -eq 0 ]
+    then
+        echo "$i"
+    fi
 done
