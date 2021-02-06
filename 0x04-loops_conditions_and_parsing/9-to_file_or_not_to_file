@@ -1,9 +1,5 @@
 #!/usr/bin/env bash
 # This gives you information on holberton school file'
-if [ ! -e "holbertonschool" ]
-    then
-    echo "holbertonschool file does not exist"
-    fi
 
 if [ -e "holbertonschool" ]
 then
@@ -23,4 +19,6 @@ then
     then
         echo "holbertonschool is a regular file"
     fi
+else
+    echo "holbertonschool file does not exist"
 fi
