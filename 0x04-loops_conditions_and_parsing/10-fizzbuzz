@@ -2,21 +2,16 @@
 # This is the fizz buzz func
 for i in {1..100}
 do
-    if [ $((i % 3)) -eq 0 ]
-    then
-        echo "Fizz"
-    fi
-    if [ $((i % 5)) -eq 0 ]
-    then
-        echo "Buzz"
-    fi
-
-    if [ $((i % 15)) -eq 0 ]
+    if [ $((i % 3)) -eq 0 ] && [ $((i % 5)) -eq 0 ]
     then
         echo "FizzBuzz"
-    fi
-    if [ ! $((i % 5)) -eq 0 ] && [ ! $((i % 3)) -eq 0 ]
+    elif [ $((i % 3)) -eq 0 ]
     then
+        echo "Fizz"
+    elif [ $((i % 5)) -eq 0 ]
+    then
+        echo "Buzz"
+    else
         echo "$i"
     fi
 done
