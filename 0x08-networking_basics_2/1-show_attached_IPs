@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# bashscript that displays all ipv4 addresses on local machine
+ifconfig | awk -F "[: ]+" '/inet addr:/ { print $4 }'
