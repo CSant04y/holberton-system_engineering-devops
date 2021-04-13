@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This file creates a symbolic link between sites enabled and site available
+sudo service nginx stop
+sudo rm /etc/nginx/sites-enabled/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sited-enabled/default
+sudo service nginx start
