@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# This file creates a symbolic link between sites enabled and site available
+# Uninstalls and re-installs nginx
 sudo apt-get purge nginx nginx-common
-sudo apt-get update
 sudo apt-get -y install nginx
-service nginx start
+sudo service nginx start
