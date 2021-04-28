@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# gets file owner chnaged to nginx and permissions for file as well
+chown nginx:nginx /etc/nginx/nginx.conf
+chmod 0700 /etc/nginx/nginx.conf
+sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
+pkill apache2
+su nginx service nginx restart
