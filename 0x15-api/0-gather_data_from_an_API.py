@@ -4,12 +4,13 @@
 """
 
 import requests
-from sys import argv
+import sys
 
 if __name__ == "__main__":
-    url_user = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
+    url_user = "https://jsonplaceholder.typicode.com/users/{}".format(
+        sys.argv[1])
     url_todo = "https://jsonplaceholder.typicode.com/users/{}/todos".format(
-        argv[1])
+        sys.argv[1])
     employee = requests.get(url_user).json()
 
     employeeName = employee.get('name')
