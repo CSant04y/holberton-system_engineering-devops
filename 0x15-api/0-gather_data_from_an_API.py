@@ -3,8 +3,8 @@
     returns info about his/hers todo list progress]
 """
 
-from sys import argv
 import requests
+from sys import argv
 
 if __name__ == "__main__":
     url_user = "https://jsonplaceholder.typicode.com/users/{}".format(argv[1])
