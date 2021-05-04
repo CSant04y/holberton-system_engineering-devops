@@ -13,7 +13,7 @@ if __name__ == "__main__":
         sys.argv[1])
     employee = requests.get(url_user).json()
     # print(employee)
-    employeeName = employee.get('name')
+    employeeName = employee.get('username')
     employeeID = employee.get('id')
     print(employeeName)
     allTasks = requests.get(url_todo).json()
