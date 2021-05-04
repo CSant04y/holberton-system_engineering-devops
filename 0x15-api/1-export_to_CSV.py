@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     for task in allTasks:
         with open(csvfile, 'a', newline='') as file:
-            my_writer = csv.writer(file)
+            my_writer = csv.writer(file, quoting=csv.QUOTE_ALL)
             values = []
             values.append("{}".format(sys.argv[1]))
             values.append("{}".format(employeeName))
