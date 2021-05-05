@@ -34,4 +34,4 @@ if __name__ == "__main__":
             todo_tasks.append(task_dict)
             # setting the id equal to the dictonary
         todo_dict[sys.argv[1]] = todo_tasks
-        json.dump(todo_dict, f)
+        json.dump(todo_dict, f, indent=2)
