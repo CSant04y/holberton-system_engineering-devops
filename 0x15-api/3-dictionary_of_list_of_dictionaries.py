@@ -13,9 +13,9 @@ if __name__ == "__main__":
     file_name = "todo_all_employees.json"
     # list for list of dictonaries
     for user_id in employee:
-        url_todo = "https://jsonplaceholder.typicode.com/users/{}/todos".format
-        (user_id.get('id'))
-        all_tasks = requests.get(url_todo).json()
+        url_to = "https://jsonplaceholder.typicode.com/users/{}/todos".format(
+            user_id.get('id'))
+        all_tasks = requests.get(url_to).json()
 
         todo_tasks = []
         with open(file_name, 'w') as f:
@@ -24,7 +24,7 @@ if __name__ == "__main__":
                 # completed, and username
                 task_dict['task'] = task.get('title')
                 task_dict['completed'] = task.get('completed')
-                task_dict['username'] = task.get('username')
+                task_dict['username'] = user_id.get('username')
                 # appending to the list of dictonaries
                 todo_tasks.append(task_dict)
                 # setting the id equal to the dictonary
